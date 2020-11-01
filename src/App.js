@@ -9,7 +9,8 @@ function App() {
     api.get('repositories').then((response)=>{
       setRepositories(response.data)
     })
-  })
+  },[])
+
   async function handleAddRepository() {
     const response = await api.post('repositories', {
       title:"tuliooov",
